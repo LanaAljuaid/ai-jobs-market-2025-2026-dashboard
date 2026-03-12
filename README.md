@@ -1,93 +1,121 @@
-# ai-jobs-market-2025-2026-dashboard
-# AI Jobs Market Dashboard
+# AI Job Market Analysis & Insights (2025–2026)
 
-This project is an interactive Streamlit dashboard for exploring the AI Jobs Market dataset.  
-It includes data understanding, cleaning, visualizations, insights, and a simple classification model.
-
-## Project Overview
-
-The dashboard is divided into the following sections:
-
-- **Overview**
-- **Understanding The Data**
-- **Cleaning The Data**
-- **Visualizations**
-- **Insights**
-- **Model**
-
-The goal of this project is to analyze trends in AI jobs, salaries, skills, experience levels, and LLM-related roles.
+A comprehensive data analysis and interactive dashboard built with **Streamlit** to explore the evolving landscape of **Artificial Intelligence careers**.  
+This project analyzes salaries, required skills, experience levels, and global demand trends for AI-related roles.
 
 ---
 
-## Dataset Features
+## Table of Contents
 
-The dataset includes information about:
+- Overview
+- Key Features
+- Dataset Description
+- Installation & Setup
+- Technologies Used
+- Key Insights
+- Author
 
-- Job titles
+---
+
+## 🔍 Overview
+
+This project performs **Exploratory Data Analysis (EDA)** on a dataset containing AI-related job postings.
+
+The goal is to understand trends in the AI job market and answer questions such as:
+
+- Which AI roles offer the highest average salaries?
+- How does **years of experience** affect salary levels?
+- Which **countries and industries** dominate the AI job market?
+- What skills are most frequently required in AI jobs?
+- Are **LLM-related roles** becoming more common?
+
+The results are presented through an **interactive Streamlit dashboard** that allows users to explore the dataset visually.
+
+---
+
+## Key Features
+
+### Interactive Dashboard
+Built with **Streamlit**, allowing users to explore data through an interactive interface.
+
+### Salary Analysis
+- Distribution of annual salaries
+- Highest-paying AI job titles
+- Salary comparison across experience levels
+
+### Experience Insights
+Visualization of the relationship between **years of experience and salary** using statistical plots.
+
+### Market Trends
+Analysis of:
+
 - Job categories
-- Experience levels
-- Years of experience
 - Education requirements
-- Annual salaries
-- Cities and countries
-- Remote work
-- Company size
-- Industry
+- Geographic distribution of AI jobs
+- Remote work availability
+
+
+### Machine Learning Model
+A simple **classification model** predicts whether a job role is related to **Large Language Models (LLM)** based on job characteristics.
+
+---
+
+## 📊 Dataset Description
+
+The analysis is based on the dataset:
+The dataset contains information about AI job postings including:
+
+### Job Information
+- Job title
+- Job category
+- Experience level
+- Required education
+
+### Financial Data
+- Annual salary in USD
+- Salary ranges
+- AI salary premium percentage
+
+### Geographic Data
+- City
+- Country
+
+### Technical Indicators
 - Required skills
-- Demand scores
-- Salary tiers
-- LLM-related roles
+- LLM-related role indicator
 
 ---
 
-## Main Analysis Sections
+## ⚙️ Installation & Setup
 
-### 1. Understanding The Data
-This section shows:
-- Dataset column descriptions
-- Dataset shape
-- Unique job titles
-- Unique job categories
-- Unique countries
-- Unique cities
+### 1️⃣ Clone the repository
 
-### 2. Cleaning The Data
-This section explains:
-- Missing value checking
-- Duplicate checking
-- Suggested dropped columns
-- Final cleaned dataset columns
+```bash
+git clone https://github.com/LanaAljuaid/ai-jobs-market-2025-2026-dashboard.git
+cd ai-jobs-market-2025-2026-dashboard 
+```
+### 2️⃣ Install dependencies
 
-### 3. Visualizations
-This section includes:
-- Job market analysis
-- Salary analysis
-- Experience analysis
-- Skills analysis
+pip install -r requirements.txt
 
-### 4. Insights
-This section summarizes the main findings from the exploratory data analysis.
+### 3️⃣ Run the Streamlit application
 
-### 5. Model
-A simple classification model is used to predict whether a job is LLM-related.
-
----
-
-## Technologies Used
-
-- Python
-- Streamlit
-- Pandas
-- Matplotlib
-- Seaborn
-- Scikit-learn
-
----
+streamlit run testeda.py
 
 ## Installation
 
-Clone the repository:
+### Technologies Used
 
-```bash
-git clone https://github.com/USERNAME/ai-jobs-market-dashboard.git
-cd ai-jobs-market-dashboard
+Python – Core programming language
+
+Streamlit – Interactive dashboard development
+
+Pandas – Data manipulation and cleaning
+
+NumPy – Numerical operations
+
+Matplotlib – Data visualization
+
+Seaborn – Statistical data visualization
+
+Scikit-learn – Machine learning model
