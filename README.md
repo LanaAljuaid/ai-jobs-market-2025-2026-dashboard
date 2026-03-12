@@ -95,16 +95,15 @@ git clone https://github.com/LanaAljuaid/ai-jobs-market-2025-2026-dashboard.git
 cd ai-jobs-market-2025-2026-dashboard 
 ```
 ### 2️⃣ Install dependencies
-
+```bash
 pip install -r requirements.txt
-
+```
 ### 3️⃣ Run the Streamlit application
-
+```bash
 streamlit run testeda.py
+```
 
-## Installation
-
-### Technologies Used
+## Technologies Used
 
 Python – Core programming language
 
