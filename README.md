@@ -1,5 +1,9 @@
 # AI Job Market Analysis & Insights (2025–2026)
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+
 A comprehensive data analysis and interactive dashboard built with **Streamlit** to explore the evolving landscape of **Artificial Intelligence careers**.  
 This project analyzes salaries, required skills, experience levels, and global demand trends for AI-related roles.
 
