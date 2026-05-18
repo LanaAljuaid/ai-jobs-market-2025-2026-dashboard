@@ -9,17 +9,13 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-# --------------------------------------------------
 # PAGE CONFIG
-# --------------------------------------------------
 st.set_page_config(
     page_title="AI Jobs Dashboard",
     layout="wide"
 )
 
-# --------------------------------------------------
 # CSS
-# --------------------------------------------------
 st.markdown("""
 <style>
     .stApp {
@@ -94,9 +90,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# --------------------------------------------------
 # LOAD DATA
-# --------------------------------------------------
 @st.cache_data
 def load_data():
     return pd.read_csv("ai_jobs_market_2025_2026.csv")
@@ -104,9 +98,7 @@ def load_data():
 df = load_data()
 cleaned_df = df.drop(columns=["job_id", "salary_min_usd", "salary_max_usd"], errors="ignore")
 
-# --------------------------------------------------
 # SIDEBAR
-# --------------------------------------------------
 with st.sidebar:
     if os.path.exists("logo.png"):
         st.image("logo.png", use_container_width=True)
@@ -117,15 +109,12 @@ with st.sidebar:
         ["Overview", "Understanding The Data", "Cleaning The Data", "Visualizations", "Insights", "Model"]
     )
 
-# --------------------------------------------------
+
 # HEADER
-# --------------------------------------------------
 st.markdown('<p class="title">AI Jobs Market Dashboard</p>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">EDA and simple classification model for AI job market trends.</p>', unsafe_allow_html=True)
 
-# --------------------------------------------------
 # OVERVIEW
-# --------------------------------------------------
 if section == "Overview":
     c1, c2, c3, c4 = st.columns(4)
 
@@ -166,9 +155,8 @@ if section == "Overview":
     st.dataframe(df.head(10), use_container_width=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
-# --------------------------------------------------
+
 # UNDERSTANDING THE DATA
-# --------------------------------------------------
 elif section == "Understanding The Data":
     st.markdown('<div class="section-block">', unsafe_allow_html=True)
     st.subheader("Understanding The Data")
@@ -209,9 +197,8 @@ elif section == "Understanding The Data":
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# --------------------------------------------------
+
 # CLEANING
-# --------------------------------------------------
 elif section == "Cleaning The Data":
     st.markdown('<div class="section-block">', unsafe_allow_html=True)
     st.subheader("Cleaning The Data")
@@ -243,9 +230,8 @@ elif section == "Cleaning The Data":
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# --------------------------------------------------
+
 # VISUALIZATIONS
-# --------------------------------------------------
 elif section == "Visualizations":
     st.markdown('<div class="section-block">', unsafe_allow_html=True)
     st.subheader("Visualizations")
@@ -315,9 +301,8 @@ elif section == "Visualizations":
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# --------------------------------------------------
+
 # INSIGHTS
-# --------------------------------------------------
 elif section == "Insights":
     st.markdown('<div class="section-block">', unsafe_allow_html=True)
     st.subheader("Insights")
@@ -336,9 +321,8 @@ elif section == "Insights":
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# --------------------------------------------------
+
 # MODEL
-# --------------------------------------------------
 elif section == "Model":
     st.markdown('<div class="section-block">', unsafe_allow_html=True)
     st.subheader("Classification Model")
